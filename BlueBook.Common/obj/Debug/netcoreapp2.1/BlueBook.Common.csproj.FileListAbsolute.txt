@@ -1,0 +1,9 @@
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Common\bin\Debug\netcoreapp2.1\BlueBook.Common.deps.json
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Common\bin\Debug\netcoreapp2.1\BlueBook.Common.dll
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Common\bin\Debug\netcoreapp2.1\BlueBook.Common.pdb
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Common\obj\Debug\netcoreapp2.1\BlueBook.Common.csprojAssemblyReference.cache
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Common\obj\Debug\netcoreapp2.1\BlueBook.Common.csproj.CoreCompileInputs.cache
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Common\obj\Debug\netcoreapp2.1\BlueBook.Common.AssemblyInfoInputs.cache
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Common\obj\Debug\netcoreapp2.1\BlueBook.Common.AssemblyInfo.cs
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Common\obj\Debug\netcoreapp2.1\BlueBook.Common.dll
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Common\obj\Debug\netcoreapp2.1\BlueBook.Common.pdb

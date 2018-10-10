@@ -1,0 +1,14 @@
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Data\bin\Debug\netcoreapp2.1\BlueBook.Data.deps.json
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Data\bin\Debug\netcoreapp2.1\BlueBook.Data.dll
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Data\bin\Debug\netcoreapp2.1\BlueBook.Data.pdb
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Data\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Data\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Data\obj\Debug\netcoreapp2.1\BlueBook.Data.csproj.CoreCompileInputs.cache
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Data\obj\Debug\netcoreapp2.1\BlueBook.Data.AssemblyInfoInputs.cache
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Data\obj\Debug\netcoreapp2.1\BlueBook.Data.AssemblyInfo.cs
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Data\obj\Debug\netcoreapp2.1\BlueBook.Data.csproj.CopyComplete
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Data\obj\Debug\netcoreapp2.1\BlueBook.Data.dll
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Data\obj\Debug\netcoreapp2.1\BlueBook.Data.pdb
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Data\bin\Debug\netcoreapp2.1\BlueBook.Common.dll
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Data\bin\Debug\netcoreapp2.1\BlueBook.Common.pdb
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Data\obj\Debug\netcoreapp2.1\BlueBook.Data.csprojAssemblyReference.cache
