@@ -13,7 +13,6 @@ C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\B
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\BlueBook.Web.csproj.CoreCompileInputs.cache
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\BlueBook.Web.RazorAssemblyInfo.cache
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\BlueBook.Web.RazorAssemblyInfo.cs
-C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\BlueBook.Web.AssemblyInfoInputs.cache
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\BlueBook.Web.AssemblyInfo.cs
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\BlueBook.Web.TagHelpers.input.cache
@@ -58,6 +57,7 @@ C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\R
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\Razor\Views\Release\Details.g.cshtml.cs
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\Razor\Views\Release\Index.g.cshtml.cs
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
@@ -71,4 +71,4 @@ C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\B
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\BlueBook.Web.csproj.CopyComplete
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\BlueBook.Web.dll
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\BlueBook.Web.pdb
-C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\Razor\Views\Release\Index.g.cshtml.cs
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

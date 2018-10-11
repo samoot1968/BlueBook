@@ -16,7 +16,7 @@ namespace BlueBook.Data
             : base(options)
         {
         }
-
+      
         public DbSet<ReleaseNote> ReleaseNotes { get; set; }
         public DbSet<Task> Tasks { get; set; }
         public DbSet<TaskDescription> taskDescriptions { get; set; }

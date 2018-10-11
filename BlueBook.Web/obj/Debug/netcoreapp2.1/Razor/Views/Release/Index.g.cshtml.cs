@@ -119,7 +119,7 @@ using BlueBook.Web.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(829, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2243f72e8fb24f9889fa5940e623d486", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5d33eb603b41414781c2576754631fd7", async() => {
                 BeginContext(877, 7, true);
                 WriteLiteral("Details");
                 EndContext();

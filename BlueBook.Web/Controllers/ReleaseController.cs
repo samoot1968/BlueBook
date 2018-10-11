@@ -36,7 +36,7 @@ namespace BlueBook.Web.Controllers
         {
             var vm = new DetailsViewModel();
 
-            var releaseNote = _context.ReleaseNotes.Include(x => x.Tasks).FirstOrDefault(x => x.id == id);
+            var releaseNote = _context.ReleaseNotes.FirstOrDefault(x => x.id == id);
 
 
             if (releaseNote == null)
