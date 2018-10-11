@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BlueBook.Web.Models.ReleaseNotes
 {
-    public class DetailsViewMode
+    public class DetailsViewModel
     {
 
         public int id { get; set; }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using BlueBook.Data;
@@ -8,11 +9,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BlueBook.Web.Controllers
 {
-    public class ReleaseNotesController : Controller
+    public class ReleaseController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public ReleaseNotesController(ApplicationDbContext context)
+        public ReleaseController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -32,12 +33,12 @@ namespace BlueBook.Web.Controllers
 
         public IActionResult Details(int id)
         {
-            var vm = new DetailsViewMode();
+            var vm = new DetailsViewModel();
 
-            var releaseNote = _context.ReleaseNotes.FirstOrDefault(x => x.id == id); 
+            var releaseNote = _context.ReleaseNotes.FirstOrDefault(x => x.id == id);
 
 
-            if(releaseNote == null)
+            if (releaseNote == null)
             {
                 return NotFound();
             }
@@ -46,7 +47,7 @@ namespace BlueBook.Web.Controllers
             vm.Name = releaseNote.Name;
             vm.NumberOfTasks = releaseNote.Tasks.Count();
 
-
+            
             vm.Tasks = releaseNote.Tasks.Select(x => new TasksDataModel
             {
                   Application = x.Application,
@@ -54,7 +55,7 @@ namespace BlueBook.Web.Controllers
                   taskName = x.taskName,
                   taskNumber = x.taskNumber,
                   TaskDescriptions = x.TaskDescriptions.Select(y => new TaskDescriptionDataModel {
-                        taskDescription = y.Description
+                        taskDescriptions = y.Description
                    }).ToList()
             }).ToList();
 

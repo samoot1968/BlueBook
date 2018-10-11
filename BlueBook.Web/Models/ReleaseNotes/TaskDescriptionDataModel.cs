@@ -2,6 +2,6 @@
 {
     public class TaskDescriptionDataModel
     {
-        public string taskDescription { get; set; }
+        public string taskDescriptions { get; set; }
     }
 }
