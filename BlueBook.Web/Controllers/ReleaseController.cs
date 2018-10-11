@@ -7,6 +7,7 @@ using BlueBook.Data;
 using BlueBook.Web.Models.ReleaseNotes;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace BlueBook.Web.Controllers
 {
     public class ReleaseController : Controller
@@ -35,7 +36,7 @@ namespace BlueBook.Web.Controllers
         {
             var vm = new DetailsViewModel();
 
-            var releaseNote = _context.ReleaseNotes.FirstOrDefault(x => x.id == id);
+            var releaseNote = _context.ReleaseNotes.Include(x => x.Tasks).FirstOrDefault(x => x.id == id);
 
 
             if (releaseNote == null)
