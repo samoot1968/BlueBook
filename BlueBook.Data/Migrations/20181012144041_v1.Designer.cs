@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlueBook.Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20181011085859_testv44")]
-    partial class testv44
+    [Migration("20181012144041_v1")]
+    partial class v1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -44,7 +44,7 @@ namespace BlueBook.Web.Data.Migrations
 
                     b.Property<int>("Application");
 
-                    b.Property<int?>("ReleaseNoteid");
+                    b.Property<int>("ReleaseNoteid");
 
                     b.Property<int>("TargetTaskType");
 
@@ -67,13 +67,13 @@ namespace BlueBook.Web.Data.Migrations
 
                     b.Property<string>("Description");
 
-                    b.Property<int?>("TaskId");
+                    b.Property<int>("TaskId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("TaskId");
 
-                    b.ToTable("TaskDescription");
+                    b.ToTable("taskDescriptions");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -245,14 +245,16 @@ namespace BlueBook.Web.Data.Migrations
                 {
                     b.HasOne("BlueBook.Data.Entities.ReleaseNote", "ReleaseNote")
                         .WithMany("Tasks")
-                        .HasForeignKey("ReleaseNoteid");
+                        .HasForeignKey("ReleaseNoteid")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("BlueBook.Data.Entities.TaskDescription", b =>
                 {
                     b.HasOne("BlueBook.Data.Entities.Task", "Task")
                         .WithMany("TaskDescriptions")
-                        .HasForeignKey("TaskId");
+                        .HasForeignKey("TaskId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

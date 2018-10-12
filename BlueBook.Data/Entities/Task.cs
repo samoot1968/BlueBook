@@ -13,7 +13,10 @@ namespace BlueBook.Data.Entities
         public string taskName { get; set; }
         public TargetTaskType TargetTaskType { get; set; }
         public Application Application { get; set; }
+
+        public int ReleaseNoteid { get; set; }
         public virtual ReleaseNote ReleaseNote {get; set;}
+
         public virtual ICollection<TaskDescription> TaskDescriptions { get; set; }
     }
 }

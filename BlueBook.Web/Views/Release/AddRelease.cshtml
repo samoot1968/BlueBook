@@ -1,0 +1,24 @@
+﻿@model BlueBook.Web.Models.ReleaseNotes.AddReleaseNoteViewMode
+@{
+    ViewData["Title"] = "AddRelease";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddRelease</h2>
+
+
+
+<form asp-action="AddReleasePost">
+
+    <div class="form-group row">
+        <label for="example-datetime-local-input" class="col-2 col-form-label">Date and time</label>
+        <div class="col-10">
+            <input class="form-control" type="date" asp-for="Date">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Release Name</label>
+        <input type="text" class="form-control" id="Name" aria-describedby="emailHelp" placeholder="Release Name" asp-for="Name" value="Uuendusega">
+    </div>
+    <button type="submit">Add</button>
+</form>

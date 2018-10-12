@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Threading.Tasks;
 using BlueBook.Data;
+using BlueBook.Data.Entities;
 using BlueBook.Web.Models.ReleaseNotes;
 using Microsoft.AspNetCore.Mvc;
 
@@ -62,5 +64,55 @@ namespace BlueBook.Web.Controllers
 
             return View(vm);
         }
+
+        public IActionResult AddRelease()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddReleasePost([FromForm] ReleaseNote releaseNote)
+        {
+            try
+            {
+                if(ModelState.IsValid)
+                {
+
+
+                    _context.Add(releaseNote);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+            }catch(DbUpdateException)
+            {
+                ModelState.AddModelError("", "unable to change changes");
+            }
+
+            return View(releaseNote);
+
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+
+            var releaseNote = _context.ReleaseNotes.FirstOrDefault(x => x.id == id);
+
+            if (releaseNote == null)
+            {
+                return NotFound();
+            }
+
+
+            _context.ReleaseNotes.Remove(releaseNote);
+            await _context.SaveChangesAsync();
+
+
+            return RedirectToAction(nameof(Index));
+
+        }
+
+
     }
 }
