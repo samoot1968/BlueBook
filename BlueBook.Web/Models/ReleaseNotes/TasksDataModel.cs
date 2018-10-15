@@ -1,4 +1,5 @@
 ﻿using BlueBook.Common.Enums;
+using BlueBook.Data.Entities;
 using System.Collections.Generic;
 
 namespace BlueBook.Web.Models.ReleaseNotes
@@ -10,6 +11,7 @@ namespace BlueBook.Web.Models.ReleaseNotes
         public string taskName { get; set; }
         public TargetTaskType TargetTaskType { get; set; }
         public Application Application { get; set; }
+        public int releasenote { get; set; }
         public List<TaskDescriptionDataModel> TaskDescriptions { get; set; }
     }
 }

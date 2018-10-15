@@ -67,7 +67,7 @@ using BlueBook.Web.Models;
             WriteLiteral("\r\n<h2>Index</h2>\r\n\r\n");
             EndContext();
             BeginContext(164, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "69083123478e47cbb5d0d45c0283d42a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d260ec30ad904cb48aa278008ad3e325", async() => {
                 BeginContext(215, 15, true);
                 WriteLiteral("Add New Release");
                 EndContext();
@@ -144,7 +144,7 @@ using BlueBook.Web.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(903, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c9f147aa93de4a10820d49836d0de4b4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a5a3a5bcf7ce405d9ec8dca24dae912d", async() => {
                 BeginContext(951, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -179,7 +179,7 @@ using BlueBook.Web.Models;
             WriteLiteral("\r\n                ");
             EndContext();
             BeginContext(980, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "012ff474c9654681afbc8b7d6e0f23b7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26687b2ae8cb449c8930e70302439cb8", async() => {
                 BeginContext(1027, 6, true);
                 WriteLiteral("Remove");
                 EndContext();

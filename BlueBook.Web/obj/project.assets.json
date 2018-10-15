@@ -2499,6 +2499,12 @@
           "lib/netstandard1.4/Microsoft.IdentityModel.Xml.dll": {}
         }
       },
+      "Microsoft.Net.Compilers/2.9.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Net.Compilers.props": {}
+        }
+      },
       "Microsoft.Net.Http.Headers/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -7110,6 +7116,145 @@
         "microsoft.identitymodel.xml.nuspec"
       ]
     },
+    "Microsoft.Net.Compilers/2.9.0": {
+      "sha512": "HwYvgpsc2RDxOXEC3i1r/P9l6m8MHpO0HuIFVa7fEGiGKc5mVzor2fOyZHdpzS4Y5d9mZLRfjeTut24XpFks2g==",
+      "type": "package",
+      "path": "microsoft.net.compilers/2.9.0",
+      "files": [
+        ".signature.p7s",
+        "ThirdPartyNotices.rtf",
+        "build/Microsoft.Net.Compilers.props",
+        "microsoft.net.compilers.2.9.0.nupkg.sha512",
+        "microsoft.net.compilers.nuspec",
+        "tools/Microsoft.Build.Tasks.CodeAnalysis.dll",
+        "tools/Microsoft.CSharp.Core.targets",
+        "tools/Microsoft.CodeAnalysis.CSharp.Scripting.dll",
+        "tools/Microsoft.CodeAnalysis.CSharp.dll",
+        "tools/Microsoft.CodeAnalysis.Scripting.dll",
+        "tools/Microsoft.CodeAnalysis.VisualBasic.dll",
+        "tools/Microsoft.CodeAnalysis.dll",
+        "tools/Microsoft.DiaSymReader.Native.amd64.dll",
+        "tools/Microsoft.DiaSymReader.Native.x86.dll",
+        "tools/Microsoft.Managed.Core.targets",
+        "tools/Microsoft.VisualBasic.Core.targets",
+        "tools/Microsoft.Win32.Primitives.dll",
+        "tools/System.AppContext.dll",
+        "tools/System.Collections.Immutable.dll",
+        "tools/System.Console.dll",
+        "tools/System.Diagnostics.DiagnosticSource.dll",
+        "tools/System.Diagnostics.FileVersionInfo.dll",
+        "tools/System.Diagnostics.StackTrace.dll",
+        "tools/System.Globalization.Calendars.dll",
+        "tools/System.IO.Compression.ZipFile.dll",
+        "tools/System.IO.Compression.dll",
+        "tools/System.IO.FileSystem.Primitives.dll",
+        "tools/System.IO.FileSystem.dll",
+        "tools/System.Net.Http.dll",
+        "tools/System.Net.Sockets.dll",
+        "tools/System.Reflection.Metadata.dll",
+        "tools/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "tools/System.Security.Cryptography.Algorithms.dll",
+        "tools/System.Security.Cryptography.Encoding.dll",
+        "tools/System.Security.Cryptography.Primitives.dll",
+        "tools/System.Security.Cryptography.X509Certificates.dll",
+        "tools/System.Text.Encoding.CodePages.dll",
+        "tools/System.Threading.Tasks.Extensions.dll",
+        "tools/System.ValueTuple.dll",
+        "tools/System.Xml.ReaderWriter.dll",
+        "tools/System.Xml.XPath.XDocument.dll",
+        "tools/System.Xml.XPath.dll",
+        "tools/System.Xml.XmlDocument.dll",
+        "tools/VBCSCompiler.exe",
+        "tools/VBCSCompiler.exe.config",
+        "tools/cs/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/cs/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/cs/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/cs/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/cs/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/cs/Microsoft.CodeAnalysis.resources.dll",
+        "tools/csc.exe",
+        "tools/csc.exe.config",
+        "tools/csc.rsp",
+        "tools/csi.exe",
+        "tools/csi.exe.config",
+        "tools/csi.rsp",
+        "tools/de/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/de/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/de/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/de/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/de/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/de/Microsoft.CodeAnalysis.resources.dll",
+        "tools/es/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/es/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/es/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/es/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/es/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/es/Microsoft.CodeAnalysis.resources.dll",
+        "tools/fr/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/fr/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/fr/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/fr/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/fr/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/fr/Microsoft.CodeAnalysis.resources.dll",
+        "tools/it/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/it/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/it/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/it/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/it/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/it/Microsoft.CodeAnalysis.resources.dll",
+        "tools/ja/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/ja/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/ja/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/ja/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/ja/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/ja/Microsoft.CodeAnalysis.resources.dll",
+        "tools/ko/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/ko/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/ko/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/ko/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/ko/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/ko/Microsoft.CodeAnalysis.resources.dll",
+        "tools/pl/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/pl/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/pl/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/pl/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/pl/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/pl/Microsoft.CodeAnalysis.resources.dll",
+        "tools/pt-BR/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/pt-BR/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/pt-BR/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/pt-BR/Microsoft.CodeAnalysis.resources.dll",
+        "tools/ru/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/ru/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/ru/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/ru/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/ru/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/ru/Microsoft.CodeAnalysis.resources.dll",
+        "tools/tr/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/tr/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/tr/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/tr/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/tr/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/tr/Microsoft.CodeAnalysis.resources.dll",
+        "tools/vbc.exe",
+        "tools/vbc.exe.config",
+        "tools/vbc.rsp",
+        "tools/zh-Hans/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/zh-Hans/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/zh-Hans/Microsoft.CodeAnalysis.resources.dll",
+        "tools/zh-Hant/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/zh-Hant/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/zh-Hant/Microsoft.CodeAnalysis.resources.dll"
+      ]
+    },
     "Microsoft.Net.Http.Headers/2.1.1": {
       "sha512": "tNh1YCfZ943/d3WSE6cD57O05rhvi3lmKgwoi3zFg4wc/O/oec5FNHZmBCRau4GfzRC5zS/CBdOAkRwbvtZSaQ==",
       "type": "package",
@@ -7507,7 +7652,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/2.1.4": {
-      "sha512": "pRyGF/8FWK+JGHH1ILwBGChTS+Gbo/oEKEOBnOSvwfUO1FmrSIYzF2+oMZCv8J1viGopXtZeIqbi3xLjdroR+A==",
+      "sha512": "TD7kcw+VSlVt8HnYpWI0cycv5sbQt6TmsiIotsUNmTEGldTJNbz9VnnFHXM4OlPeykk+pzzI+85hGTvjHEyitQ==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration/2.1.4",
       "files": [
@@ -7519,7 +7664,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/2.1.4": {
-      "sha512": "eRwMmal/ed9hDXIV0BoTuchMaX/N52U91UotVUOeNdYp0uplh33A52dhr3DiaeilHjc08gX+lFOwR/VLNxUMnA==",
+      "sha512": "Wbho7vtTlx4dn5WiEeaHj1wl1YsOk0JuhQbQNORG412Z3c2O6J2P3Zm2GuLzGNvXsBEjMFjlXuxE6SjuxCEs7w==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.contracts/2.1.4",
       "files": [
@@ -7531,7 +7676,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Core/2.1.4": {
-      "sha512": "f1d9gK4xdrHzjU2j4CGIL6JNvHWJUbKnZRmEhP/NRRSut29KhClPcALcV6R/nJ48QvECnu+Wwfy+hUJMa1uddg==",
+      "sha512": "MCh9syrOIKOoeHNPbFa642yjz+XCAF43JrdO//Y4JE3nobwlLdu6NWCFrudAt6NxgL/0BQuZKL7AsYp9RcJxjA==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.core/2.1.4",
       "files": [
@@ -7543,7 +7688,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Design/2.1.4": {
-      "sha512": "qHnioaphp0iIQO6+FtHCLMRKABq7IOvApKmQ5/YELrY56yg/rtiT4DeXDUNpsBRmJEuTHP5mcYAXUXs7Pn7Arg==",
+      "sha512": "E1X3OljxZq46xpThV6x5vAAi34+aYXaUEGr2r69wgkcHCVy26HDMGVO6yNN9ZpJ99369b64O0HoKZ5WGo8VVIQ==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.design/2.1.4",
       "files": [
@@ -7565,7 +7710,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/2.1.4": {
-      "sha512": "EbNTVZ5lohK0C1EcnvJIjGzi3sqfzFbeqyUk4jkH/bq55uyUtObUrkao/ddFEQ9IgjXWAqy9BqKNVLEJ/kuBuw==",
+      "sha512": "EX/69uGnM4tHjN+D8S4gyOo0CQhi/DjXV87ooRbdT3rfXQNk6JhauDGhDjj1xQnPr/6B8bDXh75kahRPYnr8Mg==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/2.1.4",
       "files": [
@@ -7578,7 +7723,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Templating/2.1.4": {
-      "sha512": "vy4sxmI9bgAc9PTd0f8re0h9Fq9DbltT0TCc5ZppH3rq/w22K1R23hzd0NA+TvM+kkzSiy6/mgzLlIylFqg1LQ==",
+      "sha512": "T0iX45PIu8y5E/EJobHiI8PBuaWqT04vsLV3QYfTfHBcMshs6VJjCvfCd1dmHDGIXiQXZO5gOS3EsLQ3VVBu9w==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.templating/2.1.4",
       "files": [
@@ -7590,7 +7735,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Utils/2.1.4": {
-      "sha512": "mODOWROfc7yeroPiU/MBQdVLYTV69GJTX0LY7Wlu2F5pjsvzKbqQRE1uzgLPeGYt5IHK5sV9Qq9JnsEeH6B8Vg==",
+      "sha512": "bVXXOYfTHW425012c/OJHQ5J4V59U6ZpO+vwwE5Pad6eohbBxwTD1jiO/9dMHupDbgXdc4Qp4k+OaS3dFOoBrA==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.utils/2.1.4",
       "files": [
@@ -7602,7 +7747,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/2.1.4": {
-      "sha512": "3sAjNCBzP3ENcOfcHdrpKNioyDeO9lgjTtkB9pDhV9fwGpICyvcNUXIz1sbGiYgaxT6/oQ1F8TMYB8ejUKARFg==",
+      "sha512": "VA1NL3o2h2gcz2V5jSCoCg27GKvj56OATWbw2nMcNpfPmVVRBR/XFrxa9bqfs23dzMpFopIOm35EGOnGsYaMvg==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegenerators.mvc/2.1.4",
       "files": [
@@ -12962,6 +13107,7 @@
       "Microsoft.EntityFrameworkCore.Proxies >= 2.1.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.1.4",
       "Microsoft.NETCore.App >= 2.1.0",
+      "Microsoft.Net.Compilers >= 2.9.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.4"
     ]
   },
@@ -13028,6 +13174,12 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "Microsoft.Net.Compilers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.9.0, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "suppressParent": "All",
