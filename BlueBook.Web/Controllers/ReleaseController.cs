@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BlueBook.Web.Controllers
 {
+    [Route("release")]
     public class ReleaseController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -22,7 +23,10 @@ namespace BlueBook.Web.Controllers
             _context = context;
         }
 
+
         //Index Function
+        [HttpGet]
+        [Route("")]
         public IActionResult Index()
         {
             var vm = new ListViewModel();
@@ -37,11 +41,12 @@ namespace BlueBook.Web.Controllers
         }
 
         //Details Function
-        public IActionResult Details(int id)
+        [Route("Details/{releaseNoteId}")]
+        public IActionResult Details(int releaseNoteId)
         {
             var vm = new DetailsViewModel();
 
-            var releaseNote = _context.ReleaseNotes.FirstOrDefault(x => x.id == id);
+            var releaseNote = _context.ReleaseNotes.FirstOrDefault(x => x.id == releaseNoteId);
 
 
             if (releaseNote == null)
@@ -52,7 +57,7 @@ namespace BlueBook.Web.Controllers
             vm.Date = releaseNote.Date;
             vm.Name = releaseNote.Name;
             vm.NumberOfTasks = releaseNote.Tasks.Count();
- 
+            vm.ReleaseNotesid = releaseNote.id;
 
             
             vm.Tasks = releaseNote.Tasks.Select(x => new TasksDataModel
@@ -71,29 +76,38 @@ namespace BlueBook.Web.Controllers
         }
 
         //Add Release View
-        public IActionResult AddRelease()
+        [HttpGet]
+        [Route("addRelease")]
+        public IActionResult AddReleaseView()
         {
             return View();
         }
 
 
         [HttpPost]
+        [Route("{releaseNoteId}/tasks/add")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddTasks (int id, [FromForm] BlueBook.Data.Entities.Task task)
+        public async Task<IActionResult> AddTasks ([FromRoute]int releaseNoteId, [FromForm] AddTaskViewModel model)
         {
-            var releaseNoteId = _context.ReleaseNotes.FirstOrDefault(x => x.id == id);
-            var test = new TasksDataModel();
+            
             try
             {
                 if(ModelState.IsValid)
                 {
-                    task.ReleaseNoteid = 1003;
-                    task.Application = (Application)1;
-                    task.TargetTaskType = (TargetTaskType)1;
+                    var task = new Tasks
+                    {
+                        Application = model.Application,
+                        ReleaseNoteid = releaseNoteId,
+                        TargetTaskType = model.TargetTaskType,
+                        taskName = model.taskName,
+                        taskNumber = model.taskNumber
+                        
+                    };
 
                     _context.Add(task);
+
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction("Details", new { releaseNoteId = releaseNoteId});
                 }
             }catch(DbUpdateException)
             {
@@ -107,7 +121,8 @@ namespace BlueBook.Web.Controllers
         //Add Release function
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddReleasePost([FromForm] ReleaseNote releaseNote)
+        [Route("add")]
+        public async Task<IActionResult> AddRelease([FromForm] ReleaseNote releaseNote)
         {
             try
             {
@@ -115,10 +130,9 @@ namespace BlueBook.Web.Controllers
                 {
                     _context.Add(releaseNote);
                     await _context.SaveChangesAsync();
-
-                    //int id = releaseNote.id;
                     
-                    return RedirectToAction("Details", new { releaseNote.id });
+                    
+                    return RedirectToAction("Details" ,new { releaseNoteId = releaseNote.id    });
                 }
 
             }catch(DbUpdateException)
@@ -132,10 +146,11 @@ namespace BlueBook.Web.Controllers
 
         //Delete function
         [HttpGet]
-        public async Task<IActionResult> Delete(int id)
+        [Route("Delete/{releaseNoteId}")]
+        public async Task<IActionResult> Delete(int releaseNoteId)
         {
 
-            var releaseNote = _context.ReleaseNotes.FirstOrDefault(x => x.id == id);
+            var releaseNote = _context.ReleaseNotes.FirstOrDefault(x => x.id == releaseNoteId);
 
             if (releaseNote == null)
             {

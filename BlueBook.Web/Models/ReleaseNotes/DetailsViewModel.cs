@@ -10,7 +10,7 @@ namespace BlueBook.Web.Models.ReleaseNotes
 {
     public class DetailsViewModel
     {
-        public int id { get; set; }
+        public int ReleaseNotesid { get; set; }
         public DateTime Date { get; set; }
         public string Name { get; set; }
         public int NumberOfTasks { get; set; }
@@ -19,7 +19,7 @@ namespace BlueBook.Web.Models.ReleaseNotes
         public string taskName { get; set; }
         public TargetTaskType TargetTaskType { get; set; }
         public Application Application { get; set; }
-        public int releasenote { get; set; }
+        public int releasenote;
 
     }
 }

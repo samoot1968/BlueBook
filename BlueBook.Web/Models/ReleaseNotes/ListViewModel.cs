@@ -7,6 +7,7 @@ namespace BlueBook.Web.Models.ReleaseNotes
 {
     public class ListViewModel
     {
+        public int releaseNoteId { get; set; }
         public List<ReleaseNoteDataModel> ReleaseNotes { get; set; }
     }
 }

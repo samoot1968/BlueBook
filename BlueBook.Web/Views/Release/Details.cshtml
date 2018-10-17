@@ -10,44 +10,57 @@
 <h3>Tasks in the release @Model.NumberOfTasks</h3>
 <a data-toggle="modal" data-target="#exampleModal" class="btn btn-success">Add Tasks</a>
 
-@foreach (var Item in @Model.Tasks)
+@foreach (var group in @Model.Tasks.GroupBy(i => i.TargetTaskType))
 {
-    <h3>@Item.taskName</h3>
-    <h3>@Item.taskNumber</h3>
-    <h3>@Item.releasenote</h3>
+<ul>
+    <li>
+        <h3>@group.Key</h3>
+    </li>
+
+    @foreach (var groupA in @Model.Tasks.GroupBy(i => i.Application))
+    {
+    <ul>
+        <li>
+            <h3>@groupA.Key</h3>
+        </li>
+        <ul>
+            @foreach (var item in groupA)
+            {
+                <li>
+                    <h4>
+                        <b>@item.taskNumber</b> - @item.taskName
+                    </h4>
+                </li>
+                @foreach (var Tdescription in @Model.Tasks)
+                {
+                    @foreach (var items in Tdescription.TaskDescriptions)
+                    {
+                        <ul>
+                            <li>
+                                <p>@items.taskDescriptions.Description</p>
+                            </li>
+                        </ul>
+                    }
+
+                }
+
+            }
+        </ul>
+    </ul>
+        
+    }
+
+</ul>
 }
 
+@{
+    var x = new BlueBook.Web.Models.ReleaseNotes.AddTaskViewModel
+    {
+        releaseNoteId = Model.ReleaseNotesid,
+    };
+}
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <form asp-action="AddTasks">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label>Type</label>
-                        <select class="form-control" asp-for="TargetTaskType" asp-items="Html.GetEnumSelectList(typeof(BlueBook.Common.Enums.TargetTaskType))"></select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Platform</label>
-                        <select class="form-control" asp-for="Application" asp-items="Html.GetEnumSelectList(typeof(BlueBook.Common.Enums.Application))"></select>
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
+<partial name="_AddTasksModal" model="x" />
 
 
 

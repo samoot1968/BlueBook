@@ -18,7 +18,7 @@ namespace BlueBook.Data
         }
       
         public DbSet<ReleaseNote> ReleaseNotes { get; set; }
-        public DbSet<Task> Tasks { get; set; }
+        public DbSet<Tasks> Tasks { get; set; }
         public DbSet<TaskDescription> taskDescriptions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

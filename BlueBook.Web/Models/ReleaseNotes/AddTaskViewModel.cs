@@ -4,19 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlueBook.Data.Entities
+namespace BlueBook.Web.Models.ReleaseNotes
 {
-    public class Task
+    public class AddTaskViewModel
     {
-        public int Id { get; set; }
+        public int releaseNoteId { get; set; }
         public string taskNumber { get; set; }
         public string taskName { get; set; }
         public TargetTaskType TargetTaskType { get; set; }
         public Application Application { get; set; }
-
-        public int ReleaseNoteid { get; set; }
-        public virtual ReleaseNote ReleaseNote {get; set;}
-
-        public virtual ICollection<TaskDescription> TaskDescriptions { get; set; }
+        public string taskDescription { get; set; }
     }
 }

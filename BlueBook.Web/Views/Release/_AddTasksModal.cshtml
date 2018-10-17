@@ -1,0 +1,44 @@
+﻿@model BlueBook.Web.Models.ReleaseNotes.AddTaskViewModel
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form asp-action="AddTasks" asp-controller="Release" asp-route-releaseNoteId="@Model.releaseNoteId">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Type</label>
+                        <select class="form-control" asp-for="TargetTaskType" asp-items="Html.GetEnumSelectList(typeof(BlueBook.Common.Enums.TargetTaskType))"></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Platform</label>
+                        <select class="form-control" asp-for="Application" asp-items="Html.GetEnumSelectList(typeof(BlueBook.Common.Enums.Application))"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Task Number</label>
+                        <input type="text" class="form-control" asp-for="taskNumber" value="ROS-"></input>
+                    </div>
+                    <div class="form-group">
+                        <label>Task Name</label>
+                        <input type="text" class="form-control" asp-for="taskName" placeholder="Task Name"></input>
+                    </div>
+                    <div class="form-group">
+                        <label>Task Description</label>
+                        <textarea rows="3" cols="33" class="form-control" asp-for="taskDescription" placeholder="Task description"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
