@@ -6,7 +6,7 @@
 
 <h2>Index</h2>
 
-<a class="btn btn-success" asp-action="AddReleaseView">Add New Release</a>
+<a class="btn btn-success" asp-action="AddRelease">Add New Release</a>
 <table class="table">
     <thead>
         <tr>
@@ -34,10 +34,8 @@
                 @Html.DisplayFor(modelItem => item.NumberOfTasks)
             </td>
             <td>
-                <a asp-action="Details"  asp-route-id="@item.id">Details</a>
-                <a asp-action="Delete" asp-route-id="@item.id">Remove</a>
-                
-                
+                <a asp-action="Details" asp-route-releaseNoteId="@item.id">Details</a>
+                <a asp-action="Delete" asp-route-releaseNoteId="@item.id">Remove</a>
             </td>
         </tr>
 }

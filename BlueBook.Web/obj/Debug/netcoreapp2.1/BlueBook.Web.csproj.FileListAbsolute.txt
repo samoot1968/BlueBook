@@ -73,4 +73,4 @@ C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\B
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\BlueBook.Web.pdb
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\Razor\Views\Release\_AddTasksModal.g.cshtml.cs
-C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\Razor\Views\Release\AddReleaseView.g.cshtml.cs
+C:\Users\Toomas Unt\source\repos\BlueBook\BlueBook.Web\obj\Debug\netcoreapp2.1\Razor\Views\Release\AddRelease.g.cshtml.cs

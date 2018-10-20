@@ -14,5 +14,6 @@ namespace BlueBook.Web.Models.ReleaseNotes
         public TargetTaskType TargetTaskType { get; set; }
         public Application Application { get; set; }
         public string taskDescription { get; set; }
+        public int TaskId { get; set; }
     }
 }

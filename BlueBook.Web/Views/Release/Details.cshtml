@@ -10,39 +10,36 @@
 <h3>Tasks in the release @Model.NumberOfTasks</h3>
 <a data-toggle="modal" data-target="#exampleModal" class="btn btn-success">Add Tasks</a>
 
-@foreach (var group in @Model.Tasks.GroupBy(i => i.TargetTaskType))
+@foreach (var taskTypeGroup in @Model.Tasks.GroupBy(i => i.TargetTaskType))
 {
 <ul>
     <li>
-        <h3>@group.Key</h3>
+        <h3>@taskTypeGroup.Key</h3>
     </li>
 
-    @foreach (var groupA in @Model.Tasks.GroupBy(i => i.Application))
+    @foreach (var applicationGroup in taskTypeGroup.GroupBy(i => i.Application))
     {
     <ul>
         <li>
-            <h3>@groupA.Key</h3>
+            <h3>@applicationGroup.Key</h3>
         </li>
         <ul>
-            @foreach (var item in groupA)
+            @foreach (var task in applicationGroup)
             {
                 <li>
                     <h4>
-                        <b>@item.taskNumber</b> - @item.taskName
+                        <b>@task.taskNumber</b> - @task.taskName
                     </h4>
                 </li>
-                @foreach (var Tdescription in @Model.Tasks)
-                {
-                    @foreach (var items in Tdescription.TaskDescriptions)
+                
+                <ul>
+                    @foreach (var taskDescription in task.TaskDescriptions)
                     {
-                        <ul>
-                            <li>
-                                <p>@items.taskDescriptions.Description</p>
-                            </li>
-                        </ul>
+                        <li>
+                            <h4>@taskDescription.taskDescriptions</h4>
+                        </li>
                     }
-
-                }
+                </ul>
 
             }
         </ul>
