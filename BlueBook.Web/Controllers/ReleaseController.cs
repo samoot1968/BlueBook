@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BlueBook.Web.Controllers
 {
-    [Route("release")]
+    [Route("")]
     public class ReleaseController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -63,6 +63,7 @@ namespace BlueBook.Web.Controllers
 
             vm.Tasks = releaseNote.Tasks.Select(x => new TasksDataModel
             {
+                Id = x.Id,
                 releasenote = x.ReleaseNoteid,
                 Application = x.Application,
                 TargetTaskType = x.TargetTaskType,
@@ -104,10 +105,6 @@ namespace BlueBook.Web.Controllers
                         taskName = model.taskName,
                         taskNumber = model.taskNumber,
 
-                        //TaskDescriptions = new List<TaskDescription>
-                        //{
-                        //    new TaskDescription()
-                        //}
                     };
 
                     _context.Tasks.Add(task);
@@ -158,7 +155,8 @@ namespace BlueBook.Web.Controllers
                     await _context.SaveChangesAsync();
 
 
-                    return RedirectToAction(nameof(Details), new { releaseNoteId = rn.Id });
+                    //return RedirectToAction(nameof(Details), new { releaseNoteId = rn.Id });
+                    return RedirectToAction(nameof(Index));
                 }
 
             }
@@ -193,6 +191,23 @@ namespace BlueBook.Web.Controllers
 
         }
 
+
+        [HttpGet]
+        [Route("{taskId}/deletenote")]
+        public async Task<IActionResult> DeleteNotes(int taskId)
+        {
+            var task = _context.Tasks.FirstOrDefault(x => x.Id == taskId);
+
+            if (task == null)
+            {
+                return NotFound();
+            }
+
+            _context.Tasks.Remove(task);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Details), new { releaseNoteId = task.ReleaseNoteid });
+        }
 
     }
 }

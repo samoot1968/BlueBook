@@ -4,53 +4,6 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-<h2> @Model.Date.ToString("dd/MM/yyyy") @Model.Name </h2>
-<h3>Tasks in the release @Model.NumberOfTasks</h3>
-<a data-toggle="modal" data-target="#exampleModal" class="btn btn-success">Add Tasks</a>
-
-@foreach (var taskTypeGroup in @Model.Tasks.GroupBy(i => i.TargetTaskType))
-{
-<ul>
-    <li>
-        <h3>@taskTypeGroup.Key</h3>
-    </li>
-
-    @foreach (var applicationGroup in taskTypeGroup.GroupBy(i => i.Application))
-    {
-    <ul>
-        <li>
-            <h3>@applicationGroup.Key</h3>
-        </li>
-        <ul>
-            @foreach (var task in applicationGroup)
-            {
-                <li>
-                    <h4>
-                        <b>@task.taskNumber</b> - @task.taskName
-                    </h4>
-                </li>
-                
-                <ul>
-                    @foreach (var taskDescription in task.TaskDescriptions)
-                    {
-                        <li>
-                            <h4>@taskDescription.taskDescriptions</h4>
-                        </li>
-                    }
-                </ul>
-
-            }
-        </ul>
-    </ul>
-        
-    }
-
-</ul>
-}
-
-@{
     var x = new BlueBook.Web.Models.ReleaseNotes.AddTaskViewModel
     {
         releaseNoteId = Model.ReleaseNotesid,
@@ -58,6 +11,54 @@
 }
 
 <partial name="_AddTasksModal" model="x" />
+
+<h2> @Model.Date.ToString("dd/MM/yyyy") @Model.Name </h2>
+<h3>Tasks in the release @Model.NumberOfTasks</h3>
+
+<a data-toggle="modal" data-target="#exampleModal" class="btn btn-success">Add Tasks</a>
+
+
+@foreach (var taskTypeGroup in @Model.Tasks.GroupBy(i => i.TargetTaskType))
+{
+    <ul>
+        <li>
+            <h3>@taskTypeGroup.Key</h3>
+        </li>
+
+        @foreach (var applicationGroup in taskTypeGroup.GroupBy(i => i.Application))
+        {
+            <ul>
+                <li>
+                    <h3>@applicationGroup.Key</h3>
+                </li>
+                <ul>
+                    @foreach (var task in applicationGroup)
+                    {
+                    <li>
+                        <h4>
+                            <b>@task.taskNumber</b> @task.taskName <a asp-action="DeleteNotes" asp-route-taskId="@task.Id">Remove</a>
+                        </h4>
+                    </li>
+
+                        <ul>
+                            @foreach (var taskDescription in task.TaskDescriptions)
+                            {
+                                <li>
+                                    <h4>@taskDescription.taskDescriptions</h4>
+                                </li>
+                            }
+                        </ul>
+
+                    }
+                </ul>
+            </ul>
+
+        }
+
+    </ul>
+}
+
+
 
 
 

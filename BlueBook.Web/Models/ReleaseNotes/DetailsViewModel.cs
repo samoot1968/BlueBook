@@ -20,6 +20,7 @@ namespace BlueBook.Web.Models.ReleaseNotes
         public TargetTaskType TargetTaskType { get; set; }
         public Application Application { get; set; }
         public int releasenote;
+        public int Id { get; set; }
 
     }
 }
